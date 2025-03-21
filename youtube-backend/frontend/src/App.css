@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+body {
+  background-color: #0f0f0f;
+} 
+
+
+.react-player {
+  video {
+    object-fit: cover;
+  }
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.playerTrue {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  filter: drop-shadow(2px 2px 2px #414141);
+}
+.playerTrue.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* scrollbar thin *//* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar for horizontal scroll */
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #787878; /* Dark color for the scrollbar */
+  border-radius: 10px; /* Round shape */
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Slightly lighter color when hovered */
+  cursor: grab;
+} 
+
+::-webkit-scrollbar-track {
+  background: #97979700; /* Background of the scrollbar track */
+  border-radius: 10px; /* Matching round shape for the track */
+  cursor: grab;
+}
+@media screen and (max-width: 500px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+/* Svg filter */
+ 
+/* Input box */
+/* From Uiverse.io by TaniaDou */ 
+.input-box {
+  position: relative;
+  /* max-width: 290px; */
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  background: none; 
+  border-radius: .6rem;
+  color: #e5e5e5;
+  font-size: 1rem;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  top: .875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: #9e9e9e;
+  transition: 500ms cubic-bezier(0.4,0,0.2,1);
+  font-size: .8rem;
+}
+
+.input:focus~.label, .input:valid ~ label {
+  top: -6px;
+  left: -5px;
+  font-size: .875rem;
+  color: #58a9ff;
+}
+/* Input box */
+ 
+
+/* Customize the progress bar */
+#nprogress .bar {
+  background: #e81414 !important; /* Custom color */
+  height: 2px !important; /* Thickness */
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #d81d1d, 0 0 5px #d8201d !important;
+}
+
+#nprogress .spinner {
+  display: none !important; /* Hide spinner */
+}
+
+/* Add specificity to override NProgress styles */
+
